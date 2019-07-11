@@ -1,0 +1,5 @@
+---
+
+# Variables for the three tier app deployment
+
+CONTENT_FOR_REPO_FILE: "{{ VAULT_CONTENT_FOR_REPO_FILE }}"
