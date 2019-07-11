@@ -37,6 +37,12 @@
   tags:
   - test.servers  
 
+- name: Fetch Instance Info
+  os_server_facts:
+    cloud: ospcloud
+    region_name: RegionOne
+  register: result
+
 - name: Wait for server to be available
   wait_for:
     host: "{{ item.public_v4 }}"
