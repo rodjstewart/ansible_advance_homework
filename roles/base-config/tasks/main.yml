@@ -1,11 +1,17 @@
 ---
 # tasks file for base-config
 
-- name: Copy Repository
-  copy:
-    content: "{{ CONTENT_FOR_REPO_FILE }}"
+#- name: Copy Repository
+#  copy:
+#    content: "{{ CONTENT_FOR_REPO_FILE }}"
+#    dest: /etc/yum.repos.d/open_three-tier-app.repo
+#    owner: root
+#    group: root
+#    mode: '0644'
+
+
+- name: enable repos
+  template:
+    src: repos_template.j2
     dest: /etc/yum.repos.d/open_three-tier-app.repo
-    owner: root
-    group: root
-    mode: '0644'
-    
+    mode: 0644
