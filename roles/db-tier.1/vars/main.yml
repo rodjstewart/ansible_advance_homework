@@ -1,4 +1,4 @@
 ---
-# vars file for db-tier
+
 # Pre 9.6 directory for postgres
 postgresql_data_dir: '/var/lib/pgsql/data/'
